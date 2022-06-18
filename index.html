@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://wallpaperaccess.com/full/1393334.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 10px rgba(8, 197, 230, 0.527);
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+
+        .logo {
+            color: rgb(255, 255, 255);
+            letter-spacing: 3px;
+
+
+        }
+
+        spam {
+            color: rgba(0, 255, 255, 0.664);
+        }
+
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 25px;
+
+
+
+
+        }
+
+        nav ul li a {
+            color: rgb(15, 15, 15);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        nav ul li a:hover {
+            color: aqua;
+            transition: .2s;
+
+        }
+
+        .btn {
+            background-color: rgba(127, 255, 255, 0.863);
+            color: rgb(12, 14, 14);
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 10px 10px;
+            border-radius: 25px;
+            transition: transform .4s;
+        }
+
+        .btn:hover {
+            transform: scale(1.2);
+        }
+
+        .content {
+            position: relative;
+            top: 50%;
+            left: 30%;
+            transform: translateY(-50%);
+            height: auto;
+            width: 650px;
+         
+           text-align: center;
+            
+          
+        
+        }
+
+        h4 {
+            color: black;
+            letter-spacing: 2px;
+            font-size: 50px;
+            margin-bottom: 15px;
+
+        }
+
+        h4 spam {
+            color: rgb(139, 230, 233);
+            margin: 20px 0px 20px;
+            font-size: 75px;
+
+        }
+
+        h3 {
+            color: black;
+            letter-spacing: 2px;
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        .G-mail form input:first-child {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 130px 14px 15px;
+            border: 2px solid rgb(59, 207, 226);
+            outline: none;
+            border-radius: 40px;
+
+        }
+
+        .G-mail form input:last-child {
+            position: absolute;
+            display: inline-block;
+            outline: none;
+            padding: 10px 40px;
+            border-radius: 30px;
+            background-color: aqua;
+            color: rgb(14, 13, 13);
+            box-shadow: 0px 0px 5px #000, 0px 0px 15px #00f7ff;
+            bottom: 4px;
+            right: 4px;
+
+
+        }
+
+
+        .about {
+            width: 100%;
+
+            padding: 100px 0px;
+            background-color: rgb(101, 135, 179);
+
+        }
+
+        .about img {
+            height: auto;
+            width: 50%;
+            margin-right: 20%;
+            border-radius: 80px 0px;
+
+        }
+
+        .about-text {
+            width: 550px;
+        }
+
+        .main {
+            width: 1130px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+
+        }
+
+        .about-text h2 {
+            color: rgb(113, 203, 255);
+            font-size: 75px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        .about-text h5 {
+            color: antiquewhite;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin-bottom: 25px;
+
+            text-transform: capitalize;
+
+
+        }
+
+        .about-text p {
+            color: antiquewhite;
+            letter-spacing: 1px;
+            line-height: 25px;
+            margin-bottom: 45px;
+            font-size: 18px;
+        }
+
+        button {
+            background-color: aqua;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px;
+            border-radius: 40px;
+            transition: .4s
+        }
+
+        button:hover {
+            background-color: transparent;
+            border: 2px solid aqua;
+            cursor: pointer;
+
+        }
+
+
+        .service {
+            background: #435b7a;
+            width: 100%;
+            padding: 100px 0px;
+        }
+
+        .title h2 {
+            color: white;
+            font-size: 75px;
+            width: 1130px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+
+        .card {
+            height: 365px;
+            width: 335px;
+            padding: 20px 35px;
+            background-color: #4fa0a3;
+            border-radius: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+
+        }
+
+        .card i {
+
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 25px 0px;
+            color: rgba(0, 230, 247, 0.575);
+        }
+
+        h2 {
+            font-size: 25px;
+            color: rgba(0, 255, 255, 0.993);
+            margin-bottom: 15px;
+        }
+
+        .par p {
+            color: #435b7a;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 25px;
+
+        }
+
+        .card .button {
+            background-color: rgba(0, 230, 247, 0.575);
+            color: rgb(32, 85, 85);
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px;
+            border-radius: 40px;
+            transition: .4s
+        }
+
+        .button:hover {
+            background-color: transparent;
+            border: 2px solid aqua;
+            cursor: pointer;
+            color: #00f7ff;
+
+        }
+
+        .contact-me {
+            width: 100%;
+            height: 290px;
+
+            background-color: #6388b8;
+            display: flex;
+            color: #00f7ff;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-me p {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+
+        }
+
+        .contact-me .button-two {
+            background-color: rgba(0, 230, 247, 0.575);
+            color: rgb(32, 85, 85);
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 13px;
+            border-radius: 40px;
+            transition: .4s
+        }
+
+        .contact-me .button-two:hover {
+            background-color: transparent;
+            border: 2px solid aqua;
+            cursor: pointer;
+            color: aqua;
+
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #435b7a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        footer p:nth-child(1) {
+            font-size: 30px;
+            color: #00f7ff;
+            margin-bottom: 20px;
+            font-weight: bold;
+
+        }
+
+        footer p:nth-child(2) {
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+
+        .social {
+            display: flex;
+        }
+
+        .social a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #00f7ff;
+            border-radius: 50%;
+            margin: 22px 10px;
+            transition: .4s;
+            color: rgb(32, 85, 85);
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social a:hover {
+            background-color: transparent;
+            border: 2px solid aqua;
+            cursor: pointer;
+            color: aqua;
+
+        }
+
+        .social a:hover {
+            transform: scale(1.3);
+            transition: .3s;
+        }
+
+        .end {
+            position: absolute;
+            color: #00f7ff;
+
+            bottom: 36px;
+            font-size: 14px;
+        }
+        @media (max-width: 798px) {
+           
+           .hero .logo {
+            color: rgb(255, 255, 255);
+            letter-spacing: 3px;
+
+
+        }
+
+        spam {
+            color: rgba(0, 255, 255, 0.664);
+        }
+
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 25px;
+
+
+
+
+        }
+
+        nav ul li a {
+            color: rgb(15, 15, 15);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        nav ul li a:hover {
+            color: aqua;
+            transition: .2s;
+
+        }
+
+        .btn {
+            background-color: rgba(127, 255, 255, 0.863);
+            color: rgb(12, 14, 14);
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 10px 10px;
+            border-radius: 25px;
+            transition: transform .4s;
+        }
+
+        .btn:hover {
+            transform: scale(1.2);
+        }
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <div class="hero" >
+        <nav>
+            <h2 class="logo"> <i> Portf<spam>olio</spam></i></h2>
+            <ul>
+                <li><a href="#home">Home </a></li>
+                <li><a href="#About us">About us</a></li>
+                <li><a href="#Service">Service </a></li>
+                <li><a href="#Contact">Contact </a></li>
+            </ul>
+            <a href="#" class="btn">Sign-Up</a>
+        </nav>
+
+        <div class="content"id="home">
+            <h4>Hello, Welcome to My <br>
+                <spam>PORTFOLIO</spam>
+            </h4>
+            <h3>I,m a Web Developer</h3>
+            <div class="G-mail">
+                <form>
+                    <input type="email" name="email" id="Email" placeholder="written your Email">
+                    <input type="submit" name="submit" value="Let Start">
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--------About us------------------------->
+    <section class="about" id="About us">
+        <div class="main">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTorz5-DHMcZkw0XjP2yAUn7ip00uUgEzsQbQ&usqp=CAU"
+                class="image">
+            <div class="about-text">
+                <h2>About-Us</h2>
+                <h5>Developer <spam> & Designer</spam>
+                </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vel rerum non, ab ducimus quo
+                    quidem unde deserunt dolor sequi est aliquid quis facere animi autem. Explicabo, perferendis. Quia,
+                    earum sint. Modi, quasi. Nam sint quaerat sed, praesentium deleniti repellendus ea eligendi nobis,
+                    excepturi nesciunt fugiat porro libero aperiam quae.
+                </p>
+                <button type="button">Let's Talk</button>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+    <!-------service section start-->
+    <div class="service" id="Service">
+        <div class="title">
+            <h2>Our Service</h2>
+        </div>
+        <div class="box">
+            <!--------------------------first box------------------------------------------>
+            <div class="card">
+                <i class="fas menu fa-bars"></i>
+                <h2>Web Development</h2>
+                <div class="par">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quos numquam repellendus libero placeat fuga quidem ea ullam quo debitis odio.</p>
+                    <p style="text-align:center;">
+                        <a class="button" href="#">Read More..</a>
+                    </p>
+                </div>
+            </div>
+
+            <!----------------second box------------------------------------------------->
+            <div class="card">
+                <i class="fa-solid fa-user"></i>
+                <h2>Web Development</h2>
+                <div class="par">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quos numquam repellendus libero placeat fuga quidem ea ullam quo debitis odio.</p>
+                    <p style="text-align:center;">
+                        <a class="button" href="#">Read More...</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <!----------------third box---------------------------------------------------->
+
+            <div class="card">
+                <i class="fa-solid fa-bell"></i>
+                <h2>Web Development</h2>
+                <div class="par">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quos numquam repellendus libero placeat fuga quidem ea ullam quo debitis odio.</p>
+                    <p style="text-align:center;">
+                        <a class="button" href="#">Read More...</a>
+                    </p>
+                </div>
+            </div>
+            <!-----------------box--end----------------------->
+        </div>
+    </div>
+    <!----------------------contant-us----------------------->
+
+
+    <div class="contact-me" id="Contact">
+        <p class="button-2">
+            Let Me Get your beautiful Website </p>
+        <a class="button-two" href="#">Hire Me</a>
+    </div>
+    <!------------footer start-------------------------------------------------->
+
+    <footer>
+        <p> SUPREET KESARWANI </p>
+        <P>For More Font-End Website - please click the link below.</P>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="end">CopyRight by supreet kesarwani</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
